@@ -1,0 +1,112 @@
+﻿  GameObject.cpp
+  ObjectA.cpp
+  ObjectB.cpp
+  ObjectC.cpp
+  ObjectD.cpp
+  main.cpp
+  setup.cpp
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(7,82): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(7,53): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(11,82): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(11,53): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(15,82): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(15,53): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(19,82): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(19,53): warning C4244: 'argument' : conversion de 'T' en 'T', perte possible de données
+          with
+          [
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
+          ]
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(75,75): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(75,57): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(94,75): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(94,57): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(113,75): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(113,57): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(207,36): warning C4244: 'argument' : conversion de 'float' en 'sf::Int32', perte possible de données
+  Génération de code en cours...
+  EcosystemEvolution.vcxproj -> X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\x64\Debug\EcosystemEvolution.exe

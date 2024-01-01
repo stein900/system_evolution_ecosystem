@@ -1,0 +1,72 @@
+
+statistics ID: 323
+A as been duplicate 14 time
+B as been duplicate 44 time
+C as been duplicate 534 time
+D as been duplicate 16 time
+.
+A as been delete 31 time
+B as been delete 0 time
+C as been delete 31 time
+D as been delete 36 time
+
+ 
+statistics ID: 3298
+A as been duplicate 19 time
+B as been duplicate 53 time
+C as been duplicate 324 time
+D as been duplicate 7 time
+.
+A as been delete 35 time
+B as been delete 0 time
+C as been delete 35 time
+D as been delete 27 time
+
+ 
+statistics ID: 9819
+A as been duplicate 11 time
+B as been duplicate 152 time
+C as been duplicate 300 time
+D as been duplicate 30 time
+.
+A as been delete 15 time
+B as been delete 0 time
+C as been delete 15 time
+D as been delete 33 time
+
+ 
+statistics ID: 3738
+A as been duplicate 0 time
+B as been duplicate 1 time
+C as been duplicate 2 time
+D as been duplicate 0 time
+.
+A as been delete 0 time
+B as been delete 0 time
+C as been delete 0 time
+D as been delete 0 time
+
+ 
+statistics ID: 378
+A as been duplicate 86 time
+B as been duplicate 440 time
+C as been duplicate 2983 time
+D as been duplicate 59 time
+.
+A as been delete 14 time
+B as been delete 0 time
+C as been delete 14 time
+D as been delete 47 time
+
+ 
+statistics ID: 8371
+A as been duplicate 4 time
+B as been duplicate 23 time
+C as been duplicate 15 time
+D as been duplicate 9 time
+.
+A as been delete 0 time
+B as been delete 0 time
+C as been delete 0 time
+D as been delete 1 time
+
