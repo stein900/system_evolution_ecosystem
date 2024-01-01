@@ -70,3 +70,111 @@ B as been delete 0 time
 C as been delete 0 time
 D as been delete 1 time
 
+ 
+statistics ID: 9782
+A as been duplicate 70 time
+B as been duplicate 99 time
+C as been duplicate 275 time
+D as been duplicate 23 time
+.
+A as been delete 19 time
+B as been delete 0 time
+C as been delete 19 time
+D as been delete 28 time
+
+ 
+statistics ID: 16
+A as been duplicate 37 time
+B as been duplicate 90 time
+C as been duplicate 176 time
+D as been duplicate 17 time
+.
+A as been delete 7 time
+B as been delete 0 time
+C as been delete 7 time
+D as been delete 22 time
+
+ 
+statistics ID: 3212
+A as been duplicate 28 time
+B as been duplicate 75 time
+C as been duplicate 222 time
+D as been duplicate 14 time
+.
+A as been delete 10 time
+B as been delete 0 time
+C as been delete 10 time
+D as been delete 21 time
+
+ 
+statistics ID: 7137
+A as been duplicate 17 time
+B as been duplicate 10 time
+C as been duplicate 12 time
+D as been duplicate 8 time
+.
+A as been delete 10 time
+B as been delete 0 time
+C as been delete 10 time
+D as been delete 14 time
+
+ 
+statistics ID: 1834
+A as been duplicate 9 time
+B as been duplicate 18 time
+C as been duplicate 6 time
+D as been duplicate 3 time
+.
+A as been delete 9 time
+B as been delete 0 time
+C as been delete 9 time
+D as been delete 11 time
+
+ 
+statistics ID: 2577
+A as been duplicate 64 time
+B as been duplicate 130 time
+C as been duplicate 225 time
+D as been duplicate 29 time
+.
+A as been delete 14 time
+B as been delete 0 time
+C as been delete 15 time
+D as been delete 32 time
+
+ 
+statistics ID: 8424
+A as been duplicate 0 time
+B as been duplicate 0 time
+C as been duplicate 0 time
+D as been duplicate 0 time
+.
+A as been delete 0 time
+B as been delete 0 time
+C as been delete 0 time
+D as been delete 0 time
+
+ 
+statistics ID: 351
+A as been duplicate 0 time
+B as been duplicate 0 time
+C as been duplicate 0 time
+D as been duplicate 0 time
+.
+A as been delete 0 time
+B as been delete 0 time
+C as been delete 0 time
+D as been delete 1 time
+
+ 
+statistics ID: 2409
+A as been duplicate 7 time
+B as been duplicate 26 time
+C as been duplicate 619 time
+D as been duplicate 14 time
+.
+A as been delete 12 time
+B as been delete 0 time
+C as been delete 12 time
+D as been delete 12 time
+

@@ -3,21 +3,27 @@
 setup::setup() : window(sf::VideoMode(1500, 888), "Object Simulation") {
 
         for (int i = 0; i < settings_Obj.number_Of_Shape_Per_Type; i++) {
-        auto objA = std::make_unique<ObjectA>();
-        objA->shape.setPosition(sf::Vector2f(rand() % window.getSize().x, rand() % window.getSize().y));
-        objects.push_back(std::move(objA));
 
-        auto objB = std::make_unique<ObjectB>();
-        objB->shape.setPosition(sf::Vector2f(rand() % window.getSize().x, rand() % window.getSize().y));
-        objects.push_back(std::move(objB));
-
-        auto objC = std::make_unique<ObjectC>();
-        objC->shape.setPosition(sf::Vector2f(rand() % window.getSize().x, rand() % window.getSize().y));
-        objects.push_back(std::move(objC));
-
-        auto objD = std::make_unique<ObjectD>();
-        objD->shape.setPosition(sf::Vector2f(rand() % window.getSize().x, rand() % window.getSize().y));
-        objects.push_back(std::move(objD));
+        if (settings_Obj.APPEND_OBJECTS_TYPE_A) {
+            auto objA = std::make_unique<ObjectA>();
+            objA->shape.setPosition(sf::Vector2f(rand() % window.getSize().x, rand() % window.getSize().y));
+            objects.push_back(std::move(objA));
+        }
+        if (settings_Obj.APPEND_OBJECTS_TYPE_B) {
+            auto objB = std::make_unique<ObjectB>();
+            objB->shape.setPosition(sf::Vector2f(rand() % window.getSize().x, rand() % window.getSize().y));
+            objects.push_back(std::move(objB));
+        }
+        if (settings_Obj.APPEND_OBJECTS_TYPE_C) {
+            auto objC = std::make_unique<ObjectC>();
+            objC->shape.setPosition(sf::Vector2f(rand() % window.getSize().x, rand() % window.getSize().y));
+            objects.push_back(std::move(objC));
+        }
+        if (settings_Obj.APPEND_OBJECTS_TYPE_D) {
+            auto objD = std::make_unique<ObjectD>();
+            objD->shape.setPosition(sf::Vector2f(rand() % window.getSize().x, rand() % window.getSize().y));
+            objects.push_back(std::move(objD));
+        }
     }
     std::cout<<see_Evolution_Statistic();
     this->ID = rand() % 10000;
@@ -186,15 +192,24 @@ std::string setup::see_Evolution_Statistic(){
         this->statistics += "\n";
         this->statistics += "statistics ID: " + std::to_string(this->ID);
         this->statistics += "\n";
-        this->statistics += this->RED + "A" + this->RESET + " as been duplicate " + std::to_string(this->A_duplication) + " time" + "\n";
-        this->statistics += this->BLUE + "B" + this->RESET + " as been duplicate " + std::to_string(this->B_duplication) + " time" + "\n";
-        this->statistics += this->GREEN + "C" + this->RESET + " as been duplicate " + std::to_string(this->C_duplication) + " time" + "\n";
-        this->statistics += this->MAGENTA + "D" + this->RESET + " as been duplicate " + std::to_string(this->D_duplication) + " time" + "\n";
+        if (settings_Obj.APPEND_OBJECTS_TYPE_A)
+            this->statistics += this->RED + "A" + this->RESET + " as been duplicate " + std::to_string(this->A_duplication) + " time" + "\n";
+        if (settings_Obj.APPEND_OBJECTS_TYPE_B)
+            this->statistics += this->BLUE + "B" + this->RESET + " as been duplicate " + std::to_string(this->B_duplication) + " time" + "\n";
+        if (settings_Obj.APPEND_OBJECTS_TYPE_C)
+            this->statistics += this->GREEN + "C" + this->RESET + " as been duplicate " + std::to_string(this->C_duplication) + " time" + "\n";
+        if (settings_Obj.APPEND_OBJECTS_TYPE_D)
+            this->statistics += this->MAGENTA + "D" + this->RESET + " as been duplicate " + std::to_string(this->D_duplication) + " time" + "\n";
         this->statistics += ".\n";
-        this->statistics += this->RED + "A" + this->RESET + " as been delete " + std::to_string(this->A_delete) + " time" + "\n";
-        this->statistics += this->BLUE + "B" + this->RESET + " as been delete " + std::to_string(this->B_delete) + " time" + "\n";
-        this->statistics += this->GREEN + "C" + this->RESET + " as been delete " + std::to_string(this->C_delete) + " time" + "\n";
-        this->statistics += this->MAGENTA + "D" + this->RESET + " as been delete " + std::to_string(this->D_delete) + " time" + "\n";
+
+        if (settings_Obj.APPEND_OBJECTS_TYPE_A)
+            this->statistics += this->RED + "A" + this->RESET + " as been delete " + std::to_string(this->A_delete) + " time" + "\n";
+        if (settings_Obj.APPEND_OBJECTS_TYPE_B)
+            this->statistics += this->BLUE + "B" + this->RESET + " as been delete " + std::to_string(this->B_delete) + " time" + "\n";
+        if (settings_Obj.APPEND_OBJECTS_TYPE_C)
+            this->statistics += this->GREEN + "C" + this->RESET + " as been delete " + std::to_string(this->C_delete) + " time" + "\n";
+        if (settings_Obj.APPEND_OBJECTS_TYPE_D)
+            this->statistics += this->MAGENTA + "D" + this->RESET + " as been delete " + std::to_string(this->D_delete) + " time" + "\n";
         this->count = 0;
         return this->statistics;
     }
