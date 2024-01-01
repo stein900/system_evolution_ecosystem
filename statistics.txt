@@ -178,3 +178,15 @@ B as been delete 0 time
 C as been delete 12 time
 D as been delete 12 time
 
+ 
+statistics ID: 5150
+A as been duplicate 45 time
+B as been duplicate 48 time
+C as been duplicate 743 time
+D as been duplicate 15 time
+.
+A as been delete 9 time
+B as been delete 0 time
+C as been delete 9 time
+D as been delete 21 time
+

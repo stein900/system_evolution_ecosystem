@@ -19,7 +19,8 @@ public:
     float visionRange; // La portée du champ de vision
     float visionAngle; // L'angle du champ de vision
     const float M_PI = 3.14159265358979323846f;
-    const float C_SPEED = 3.0f;
+    const float HUNT_SPEED = settings_Obj.HUNT_SPEED_VALUE;
+    const float ESCAPE_SPEED = settings_Obj.ESCAPE_SPEED_VALUE;
     std::chrono::time_point<std::chrono::steady_clock> lastInteractionTime;
     const std::chrono::milliseconds blindDuration = std::chrono::milliseconds(1000); // Durée d'aveuglement après interaction
     bool isInteracting; // Nouvelle variable pour suivre l'état d'interaction
@@ -37,16 +38,18 @@ public:
         creationTime = std::chrono::steady_clock::now(); 
         visionRange = settings_Obj.vision_Range; // Exemple : 100 unités de distance
         visionAngle = settings_Obj.vision_Angle; // Exemple : 45 degrés de chaque côté de la direction de la vitesse
-        lastInteractionTime = std::chrono::steady_clock::now() - blindDuration; // Initialiser pour permettre l'interaction immédiate
+        lastInteractionTime = std::chrono::steady_clock::now() - blindDuration;
     }
 
     void update(const sf::RenderWindow& window, const std::vector<std::unique_ptr<GameObject>>& allObjects) {
-        auto now = std::chrono::steady_clock::now();
-        bool interactionOccurred = false; // Initialiser à false au début de chaque mise à jour
 
-        if (now - lastInteractionTime > blindDuration) { 
-            isInteracting = false;
-        }
+        if (settings_Obj.SMART_SURVIVAL_INSTINCT_MODE) {
+            auto now = std::chrono::steady_clock::now();
+            bool interactionOccurred = false;
+
+            if (now - lastInteractionTime > blindDuration) {
+                isInteracting = false;
+            }
 
             if (!isInteracting) {
                 auto seenObjects = objectsInVision(allObjects);
@@ -59,45 +62,46 @@ public:
 
                     if (type == 1) {
                         if (seenType == 4) { // Si la boule A voit une boule D, elle s'oriente vers elle
-                            velocity = directionNormalized * C_SPEED * 1.5f;
+                            velocity = directionNormalized * HUNT_SPEED;
                         }
                         else if (seenType == 3) { // Si la boule A voit une boule C, elle s'enfuit
-                            velocity = -directionNormalized * C_SPEED * 1.5f;
+                            velocity = -directionNormalized * ESCAPE_SPEED;
                         }
                     }
                     if (type == 2) {
                         if (seenType == 1) { // Si la boule B voit une boule A, elle s'oriente vers elle
-                            velocity = directionNormalized * C_SPEED * 1.5f;
+                            velocity = directionNormalized * HUNT_SPEED;
                         }
                     }
                     if (type == 3) {
                         if (seenType == 2) { // Si la boule C voit une boule B, elle s'oriente vers elle
-                            velocity = directionNormalized * C_SPEED * 1.5f;
+                            velocity = directionNormalized * HUNT_SPEED;
                         }
                         else if (seenType == 1) { // Si la boule C voit une boule A, elle s'enfuit
-                            velocity = -directionNormalized * C_SPEED * 1.5f;
+                            velocity = -directionNormalized * ESCAPE_SPEED;
                         }
                     }
                     if (type == 4) {
                         if (seenType == 3) { // Si la boule D voit une boule C, elle s'oriente vers elle
-                            velocity = directionNormalized * C_SPEED * 1.5f;
+                            velocity = directionNormalized * HUNT_SPEED;
                         }
                         else if (seenType == 2) { // Si la boule D voit une boule B, elle s'enfuit
-                            velocity = -directionNormalized * C_SPEED * 1.5f;
+                            velocity = -directionNormalized * ESCAPE_SPEED;
                         }
                     }
                 }
             }
-        
-        
-        if (interactionOccurred) {
-            lastInteractionTime = now;
-            isInteracting = true;
+
+
+            if (interactionOccurred) {
+                lastInteractionTime = now;
+                isInteracting = true;
+            }
         }
+        
 
         shape.move(velocity);
 
-        // Gérer les rebonds sur les bords de la fenêtre
         if (shape.getPosition().x < 0 || shape.getPosition().x > window.getSize().x) {
             velocity.x = -velocity.x;
         }
@@ -108,7 +112,16 @@ public:
 
     bool isAlive() const {
         auto now = std::chrono::steady_clock::now();
-        return std::chrono::duration_cast<std::chrono::seconds>(now - creationTime).count() < settings_Obj.time_To_Live;
+        if(this->type == 1)
+            return std::chrono::duration_cast<std::chrono::seconds>(now - creationTime).count() < settings_Obj.TIME_TO_LIVE_FOR_A;
+        if (this->type == 2)
+            return std::chrono::duration_cast<std::chrono::seconds>(now - creationTime).count() < settings_Obj.TIME_TO_LIVE_FOR_B;
+        if (this->type == 3)
+            return std::chrono::duration_cast<std::chrono::seconds>(now - creationTime).count() < settings_Obj.TIME_TO_LIVE_FOR_C;
+        if (this->type == 4)
+            return std::chrono::duration_cast<std::chrono::seconds>(now - creationTime).count() < settings_Obj.TIME_TO_LIVE_FOR_D;
+        else
+            return std::chrono::duration_cast<std::chrono::seconds>(now - creationTime).count() < settings_Obj.TIME_TO_LIVE;
     }
 
     virtual void draw(sf::RenderWindow& window) {
@@ -135,12 +148,14 @@ public:
     }
 
     void handleInteraction() {
-        auto now = std::chrono::steady_clock::now();
-        lastInteractionTime = now;
-        isInteracting = true;
+        if (settings_Obj.IS_BIND_MODE) {
+            auto now = std::chrono::steady_clock::now();
+            lastInteractionTime = now;
+            isInteracting = true;
 
-        velocity.x = -velocity.x + rand() % 3 - 1;
-        velocity.y = -velocity.y + rand() % 3 - 1;
+            velocity.x = -velocity.x + rand() % 3 - 1;
+            velocity.y = -velocity.y + rand() % 3 - 1;
+        }
     }
 
 };
