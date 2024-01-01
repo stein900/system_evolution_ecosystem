@@ -7,14 +7,14 @@ public:
 	int TIME_TO_LIVE_FOR_B = 12; //20
 	int TIME_TO_LIVE_FOR_C = 6; //20
 	int TIME_TO_LIVE_FOR_D = 12; //20
-	float vision_Angle = 45.0f; //45
-	float vision_Range = 100.0f; //100
-	float speed_Multiplication = 3.0f; //3
+	float VISION_ANGLE = 45.0f; //45
+	float VISION_RANGE = 100.0f; //100
+	float SPEED_MULTIPLICATION = 3.0f; //3
 	int PAUSE_DURATION_AFTER_CREATION = 20; //20
 
 	//simulation settings
-	int number_Of_Shape_Per_Type = 8; //20
-	float frame_Rate_Number = 60; //60
+	int NUMBER_OF_SHAPE_PER_TYPE = 8; //20
+	float NUMBER_OF_FRAME_RATE_PER_SECONDS = 60; //60
 	int MAX_OBJECTS_PER_TYPE_VAR = 60; //300
 	int NUMBER_OF_ITERATIONS_BEFORE_DISPLAYING_STATISTICS = 60; //60
 	
