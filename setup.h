@@ -44,6 +44,7 @@ public:
     bool isEnd = false;
     float X_HZ_REFRESH_PERIOD = 1000 / settings_Obj.NUMBER_OF_FRAME_RATE_PER_SECONDS;
     enum class ObjectType { none, A, B, C, D};
+    std::string algorithm_help = " ";
 public:
     setup();
     void drawing_object();

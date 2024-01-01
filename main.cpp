@@ -28,7 +28,7 @@ int main() {
         Src_Obj.handle_Collision();
         Src_Obj.delete_Object();
         Src_Obj.merge_Duplicated_object();
-        if (Src_Obj.count > 60) std::cout << Src_Obj.see_Evolution_Statistic();
+        if (Src_Obj.count > 60 && !Src_Obj.isEnd) std::cout << Src_Obj.see_Evolution_Statistic() << Src_Obj.algorithm_help;
         Src_Obj.handle_Frame_rate_per_seconds_stability();
         Src_Obj.window.display();
     }

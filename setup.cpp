@@ -26,7 +26,18 @@ setup::setup() : window(sf::VideoMode(1500, 888), "Object Simulation") {
         }
     }
     std::cout<<see_Evolution_Statistic();
-    this->ID = rand() % 10000;
+    this->ID = rand() % 1000000;
+
+    algorithm_help += "\n";
+    algorithm_help += this->RED + "A" + this->RESET + " ---KILL---> " + this->GREEN + "C" + this->RESET + "\n";
+    algorithm_help += this->BLUE + "B" + this->RESET + " ---KILL---> " + this->MAGENTA + "D" + this->RESET + "\n";
+    algorithm_help += this->GREEN + "C" + this->RESET + " ---KILL---> " + this->RED + "A" + this->RESET + "\n";
+    algorithm_help += this->MAGENTA + "D" + this->RESET + " ---KILL---> " + "NONE" + "\n";
+    algorithm_help += "\n";
+    algorithm_help += this->RED + "A" + this->RESET + " + " + this->MAGENTA + "D" + this->RESET + " ---DUPLIQUE---> " + this->RED + "A" + this->RESET + "\n";
+    algorithm_help += this->BLUE + "B" + this->RESET + " + " + this->RED + "A" + this->RESET + " ---DUPLIQUE---> " + this->BLUE + "B" + this->RESET + "\n";
+    algorithm_help += this->GREEN + "C" + this->RESET + " + " + this->BLUE + "B" + this->RESET + " ---DUPLIQUE---> " + this->GREEN + "C" + this->RESET + "\n";
+    algorithm_help += this->MAGENTA + "D" + this->RESET + " + " + this->GREEN + "C" + this->RESET + " ---DUPLIQUE---> " + this->MAGENTA + "D" + this->RESET + "\n";
 }
 
 void setup::drawing_object(){
@@ -68,6 +79,14 @@ void setup::handle_Collision(){
                     objects[i]->handleInteraction();
                     objects[j]->handleInteraction();
                     break; 
+                }
+                else if (objects[i]->type == static_cast<int>(setup::ObjectType::D) && objects[j]->type == static_cast<int>(setup::ObjectType::B)) { // C touche A
+
+                    toRemove.push_back(j);
+                    this->B_delete++;
+                    objects[i]->handleInteraction();
+                    objects[j]->handleInteraction();
+                    break;
                 }
                 else if (objects[i]->type == static_cast<int>(setup::ObjectType::A) && objects[j]->type == static_cast<int>(setup::ObjectType::D)) { // A touche D
                     auto now = std::chrono::steady_clock::now();
@@ -212,6 +231,7 @@ std::string setup::see_Evolution_Statistic(){
             this->statistics += this->MAGENTA + "D" + this->RESET + " as been delete " + std::to_string(this->D_delete) + " time" + "\n";
         this->count = 0;
         return this->statistics;
+
     }
     return this->statistics;
 }
@@ -224,15 +244,19 @@ void setup::handle_Frame_rate_per_seconds_stability(){
 }
 
 void setup::saveStatistic(const std::string& stat) {
-    std::ofstream file("statistics.txt", std::ios::app);
+    if (settings_Obj.SAVE_DATE_AT_THE_END) {
+        std::ofstream file("statistics.txt", std::ios::app);
 
-    if (file.is_open()) {
-        file << stat << std::endl;
-        file.close();
+        if (file.is_open()) {
+            file << stat << std::endl;
+            file.close();
+        }
+        else {
+            std::cerr << "Unable to open file" << std::endl;
+        }
     }
-    else {
-        std::cerr << "Unable to open file" << std::endl;
-    }
+    else
+        std::cerr << "Unable to save date, to save you must activate the option in [settings.h]" << std::endl;
 }
 
 std::string setup::removeAnsiCodes(const std::string& input) {

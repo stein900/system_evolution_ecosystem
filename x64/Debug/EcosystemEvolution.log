@@ -77,16 +77,6 @@ X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp
           [
               T=float
           ]
-X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(81,75): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
-          with
-          [
-              T=float
-          ]
-X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(81,57): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
-          with
-          [
-              T=float
-          ]
 X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(100,75): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
           with
           [
@@ -107,6 +97,17 @@ X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp
           [
               T=float
           ]
-X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(222,36): warning C4244: 'argument' : conversion de 'float' en 'sf::Int32', perte possible de données
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(138,75): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(138,57): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\setup.cpp(242,36): warning C4244: 'argument' : conversion de 'float' en 'sf::Int32', perte possible de données
   Génération de code en cours...
+X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\GameObject.cpp(113): warning C4715: 'GameObject::isAlive' : les chemins de contrôle ne retournent pas tous une valeur
   EcosystemEvolution.vcxproj -> X:\tout le reste\visual studio 2022 project\system_evolution_ecosystem\x64\Debug\EcosystemEvolution.exe
