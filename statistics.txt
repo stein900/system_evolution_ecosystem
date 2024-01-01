@@ -502,3 +502,15 @@ B as been delete 49 time
 C as been delete 30 time
 D as been delete 45 time
 
+ 
+statistics ID: 31264
+A as been duplicate 138 time
+B as been duplicate 637 time
+C as been duplicate 1221 time
+D as been duplicate 92 time
+.
+A as been delete 24 time
+B as been delete 46 time
+C as been delete 24 time
+D as been delete 42 time
+

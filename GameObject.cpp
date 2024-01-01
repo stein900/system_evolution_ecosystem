@@ -1,7 +1,7 @@
 #include "GameObject.h"
 
 GameObject::GameObject(float radius, int initType = 0)
-    : shape(radius), type(initType), isInteracting(true) {
+    : shape(radius), type(initType), isInteracting(true), visionRange(0) {
 
     shape.setFillColor(sf::Color::Red);
 
