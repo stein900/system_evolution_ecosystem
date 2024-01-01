@@ -31,13 +31,13 @@ public:
        
         shape.setFillColor(sf::Color::Red); 
 
-        float speedX = ((rand() % 200 - 100) / 100.0f) * settings_Obj.speed_Multiplication; // valeur entre -1 et 1
-        float speedY = ((rand() % 200 - 100) / 100.0f) * 3.0f; 
+        float speedX = ((rand() % 200 - 100) / 100.0f) * settings_Obj.SPEED_MULTIPLICATION; // valeur entre -1 et 1
+        float speedY = ((rand() % 200 - 100) / 100.0f) * settings_Obj.SPEED_MULTIPLICATION;
         velocity = sf::Vector2f(speedX, speedY);
         lastDuplicationTime = std::chrono::steady_clock::now();
         creationTime = std::chrono::steady_clock::now(); 
-        visionRange = settings_Obj.vision_Range; // Exemple : 100 unités de distance
-        visionAngle = settings_Obj.vision_Angle; // Exemple : 45 degrés de chaque côté de la direction de la vitesse
+        visionRange = settings_Obj.VISION_RANGE; // Exemple : 100 unités de distance
+        visionAngle = settings_Obj.VISION_ANGLE; // Exemple : 45 degrés de chaque côté de la direction de la vitesse
         lastInteractionTime = std::chrono::steady_clock::now() - blindDuration;
     }
 

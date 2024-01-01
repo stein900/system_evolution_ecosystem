@@ -42,7 +42,7 @@ public:
     int number_of_iterations_before_displaying_statistics = settings_Obj.NUMBER_OF_ITERATIONS_BEFORE_DISPLAYING_STATISTICS;
     std::string statistics = "Waiting...";
     bool isEnd = false;
-    float X_HZ_REFRESH_PERIOD = 1000 / settings_Obj.frame_Rate_Number;
+    float X_HZ_REFRESH_PERIOD = 1000 / settings_Obj.NUMBER_OF_FRAME_RATE_PER_SECONDS;
     enum class ObjectType { none, A, B, C, D};
 public:
     setup();

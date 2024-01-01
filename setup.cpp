@@ -2,7 +2,7 @@
 
 setup::setup() : window(sf::VideoMode(1500, 888), "Object Simulation") {
 
-        for (int i = 0; i < settings_Obj.number_Of_Shape_Per_Type; i++) {
+        for (int i = 0; i < settings_Obj.NUMBER_OF_SHAPE_PER_TYPE; i++) {
 
         if (settings_Obj.APPEND_OBJECTS_TYPE_A) {
             auto objA = std::make_unique<ObjectA>();
