@@ -22,8 +22,8 @@ GameObject::GameObject(float radius, int initType = 0)
     }
     else
         visionRange = settings_Obj.VISION_RANGE; //Exemple: 100 unités de distance
-        visionAngle = settings_Obj.VISION_ANGLE; // Exemple : 45 degrés de chaque côté de la direction de la vitesse
-    
+    visionAngle = settings_Obj.VISION_ANGLE; // Exemple : 45 degrés de chaque côté de la direction de la vitesse
+
     lastInteractionTime = std::chrono::steady_clock::now() - blindDuration;
 }
 
@@ -49,30 +49,46 @@ void GameObject::update(const sf::RenderWindow& window, const std::vector<std::u
                 if (type == 1) {
                     if (seenType == 4) { // Si la boule A voit une boule D, elle s'oriente vers elle
                         velocity = directionNormalized * HUNT_SPEED;
+                        this->A_is_hunting++;
                     }
-                    else if (seenType == 3) { // Si la boule A voit une boule C, elle s'enfuit
-                        velocity = -directionNormalized * ESCAPE_SPEED;
+                    if (seenType == 3) { // Si la boule A voit une boule C, elle s'oriente vers elle
+                        velocity = directionNormalized * HUNT_SPEED;
+                        this->A_is_hunting++;
                     }
+
                 }
                 if (type == 2) {
                     if (seenType == 1) { // Si la boule B voit une boule A, elle s'oriente vers elle
                         velocity = directionNormalized * HUNT_SPEED;
+                        this->B_is_hunting++;
+                    }
+                    if (seenType == 4) { // Si la boule B voit une boule D, elle s'oriente vers elle
+                        velocity = directionNormalized * HUNT_SPEED;
+                        this->B_is_hunting++;
                     }
                 }
                 if (type == 3) {
                     if (seenType == 2) { // Si la boule C voit une boule B, elle s'oriente vers elle
-                        velocity = directionNormalized * HUNT_SPEED;
+                        velocity = directionNormalized * HUNT_SPEED * 3.0f;
+                        this->C_is_hunting++;
                     }
                     else if (seenType == 1) { // Si la boule C voit une boule A, elle s'enfuit
-                        velocity = -directionNormalized * ESCAPE_SPEED;
+                        velocity = -directionNormalized * ESCAPE_SPEED * 3.0f;
+                        this->C_is_escaping++;
                     }
                 }
                 if (type == 4) {
                     if (seenType == 3) { // Si la boule D voit une boule C, elle s'oriente vers elle
-                        velocity = directionNormalized * HUNT_SPEED;
+                        velocity = directionNormalized * HUNT_SPEED * 8.0f;
+                        this->D_is_hunting++;
+                    }
+                    if (seenType == 1) { // Si la boule D voit une boule A, elle s'oriente vers elle
+                        velocity = directionNormalized * HUNT_SPEED * 2.0f;
+                        this->D_is_hunting++;
                     }
                     else if (seenType == 2) { // Si la boule D voit une boule B, elle s'enfuit
-                        velocity = -directionNormalized * ESCAPE_SPEED;
+                        velocity = -directionNormalized * ESCAPE_SPEED * 4.0f;
+                        this->D_is_escaping++;
                     }
                 }
             }

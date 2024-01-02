@@ -14,7 +14,7 @@
 #include <regex>
 #include <unordered_map>
 #include "Settings.h"
-
+class GameObject;
 class setup{
 
 private:
@@ -32,6 +32,9 @@ private:
 
 public:
     Settings settings_Obj;
+    //GameObject gameObj_Object;
+    //GameObject* gameObj_Object = new GameObject();
+    /*std::unique_ptr<GameObject> gameObj_Object = std::make_unique<GameObject>();*/
     sf::RenderWindow window;
     sf::Event event;
     sf::Clock clock;
@@ -45,6 +48,7 @@ public:
     float X_HZ_REFRESH_PERIOD = 1000 / settings_Obj.NUMBER_OF_FRAME_RATE_PER_SECONDS;
     enum class ObjectType { none, A, B, C, D};
     std::string algorithm_help = " ";
+
 public:
     setup();
     void drawing_object();

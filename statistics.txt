@@ -514,3 +514,287 @@ B as been delete 46 time
 C as been delete 24 time
 D as been delete 42 time
 
+ 
+statistics ID: 988
+A as been duplicate 557 time
+B as been duplicate 1415 time
+C as been duplicate 992 time
+D as been duplicate 58 time
+.
+A as been delete 31 time
+B as been delete 62 time
+C as been delete 31 time
+D as been delete 54 time
+
+ 
+statistics ID: 18549
+A as been duplicate 97 times
+B as been duplicate 2834 times
+C as been duplicate 895 times
+D as been duplicate 91 times
+.
+A as been delete 41 times
+B as been delete 59 times
+C as been delete 42 times
+D as been delete 49 times
+.
+A has hunted 0 times
+B has hunted 0 times
+C has hunted 0 times
+D has hunted 0 times
+.
+A escaped 0 times
+B escaped 0 times
+C escaped 0 times
+D escaped 0 times
+
+ 
+statistics ID: 24616
+B as been duplicate 0 times
+D as been duplicate 0 times
+.
+B as been delete 1 times
+D as been delete 1 times
+
+ 
+statistics ID: 9725
+B as been duplicate 0 times
+D as been duplicate 0 times
+.
+B as been delete 0 times
+D as been delete 0 times
+
+ 
+statistics ID: 2581
+B as been duplicate 0 times
+D as been duplicate 0 times
+.
+B as been delete 2 times
+D as been delete 2 times
+
+ 
+statistics ID: 11116
+A as been duplicate 0 times
+C as been duplicate 0 times
+.
+A as been delete 0 times
+C as been delete 0 times
+
+ 
+statistics ID: 5841
+A as been duplicate 0 times
+C as been duplicate 0 times
+.
+A as been delete 0 times
+C as been delete 0 times
+
+ 
+statistics ID: 12142
+A as been duplicate 0 times
+C as been duplicate 0 times
+.
+A as been delete 0 times
+C as been delete 0 times
+
+ 
+statistics ID: 29084
+A as been duplicate 0 times
+C as been duplicate 0 times
+.
+A as been delete 26 times
+C as been delete 27 times
+
+ 
+statistics ID: 22362
+A as been duplicate 0 times
+C as been duplicate 0 times
+.
+A as been delete 25 times
+C as been delete 25 times
+
+ 
+statistics ID: 7058
+A as been duplicate 15 times
+B as been duplicate 8 times
+C as been duplicate 4 times
+D as been duplicate 0 times
+.
+A as been delete 9 times
+B as been delete 13 times
+C as been delete 9 times
+D as been delete 12 times
+
+ 
+statistics ID: 14816
+A as been duplicate 17 times
+B as been duplicate 61 times
+C as been duplicate 816 times
+D as been duplicate 6 times
+.
+A as been delete 50 times
+B as been delete 42 times
+C as been delete 50 times
+D as been delete 35 times
+
+ 
+statistics ID: 6445
+A as been duplicate 79 times
+B as been duplicate 289 times
+C as been duplicate 24 times
+D as been duplicate 0 times
+.
+A as been delete 46 times
+B as been delete 36 times
+C as been delete 46 times
+D as been delete 30 times
+
+ 
+statistics ID: 13372
+A as been duplicate 40 times
+B as been duplicate 194 times
+C as been duplicate 310 times
+D as been duplicate 2 times
+.
+A as been delete 70 times
+B as been delete 0 times
+C as been delete 70 times
+D as been delete 32 times
+
+ 
+statistics ID: 14557
+A as been duplicate 90 times
+B as been duplicate 99 times
+C as been duplicate 49 times
+D as been duplicate 14 times
+.
+A as been delete 0 times
+B as been delete 62 times
+C as been delete 41 times
+D as been delete 12 times
+
+ 
+statistics ID: 12749
+A as been duplicate 166 times
+B as been duplicate 176 times
+C as been duplicate 22 times
+D as been duplicate 9 times
+.
+A as been delete 0 times
+B as been delete 42 times
+C as been delete 38 times
+D as been delete 14 times
+
+ 
+statistics ID: 32107
+A as been duplicate 69 times
+B as been duplicate 221 times
+C as been duplicate 53 times
+D as been duplicate 11 times
+.
+A as been delete 0 times
+B as been delete 68 times
+C as been delete 30 times
+D as been delete 22 times
+
+ 
+statistics ID: 12818
+A as been duplicate 74 times
+B as been duplicate 60 times
+C as been duplicate 18 times
+D as been duplicate 11 times
+.
+A as been delete 0 times
+B as been delete 29 times
+C as been delete 15 times
+D as been delete 9 times
+
+ 
+statistics ID: 23806
+A as been duplicate 124 times
+B as been duplicate 89 times
+C as been duplicate 40 times
+D as been duplicate 0 times
+.
+A as been delete 0 times
+B as been delete 49 times
+C as been delete 36 times
+D as been delete 8 times
+
+ 
+statistics ID: 27196
+A as been duplicate 142 times
+B as been duplicate 57 times
+C as been duplicate 35 times
+D as been duplicate 9 times
+.
+A as been delete 0 times
+B as been delete 41 times
+C as been delete 36 times
+D as been delete 13 times
+
+ 
+statistics ID: 7007
+A as been duplicate 138 times
+B as been duplicate 80 times
+C as been duplicate 34 times
+D as been duplicate 5 times
+.
+A as been delete 0 times
+B as been delete 43 times
+C as been delete 38 times
+D as been delete 6 times
+
+ 
+statistics ID: 6177
+A as been duplicate 107 times
+B as been duplicate 73 times
+C as been duplicate 36 times
+D as been duplicate 4 times
+.
+A as been delete 0 times
+B as been delete 47 times
+C as been delete 35 times
+D as been delete 19 times
+
+ 
+statistics ID: 11935
+A as been duplicate 174 times
+C as been duplicate 0 times
+D as been duplicate 0 times
+.
+A as been delete 0 times
+C as been delete 2 times
+D as been delete 0 times
+
+ 
+statistics ID: 27155
+A as been duplicate 366 times
+C as been duplicate 0 times
+D as been duplicate 3 times
+.
+A as been delete 0 times
+C as been delete 19 times
+D as been delete 0 times
+
+ 
+statistics ID: 18866
+A as been duplicate 300 times
+C as been duplicate 0 times
+D as been duplicate 0 times
+.
+A as been delete 0 times
+C as been delete 19 times
+D as been delete 0 times
+
+ 
+statistics ID: 19784
+A as been duplicate 373 times
+B as been duplicate 720 times
+C as been duplicate 33 times
+D as been duplicate 5 times
+.
+A as been delete 0 times
+B as been delete 44 times
+C as been delete 36 times
+D as been delete 34 times
+

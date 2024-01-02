@@ -24,7 +24,8 @@ public:
     std::chrono::time_point<std::chrono::steady_clock> lastInteractionTime;
     const std::chrono::milliseconds blindDuration = std::chrono::milliseconds(1000); // Durée d'aveuglement après interaction
     bool isInteracting; // Nouvelle variable pour suivre l'état d'interaction
-
+    int A_is_hunting = 0, B_is_hunting = 0, C_is_hunting = 0, D_is_hunting = 0; //only for stat
+    int A_is_escaping = 0, B_is_escaping = 0, C_is_escaping = 0, D_is_escaping = 0; //only for stat
 
     GameObject(float radius, int initType);
 

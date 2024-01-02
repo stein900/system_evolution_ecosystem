@@ -32,7 +32,7 @@ setup::setup() : window(sf::VideoMode(1500, 888), "Object Simulation") {
     algorithm_help += this->RED + "A" + this->RESET + " ---KILL---> " + this->GREEN + "C" + this->RESET + "\n";
     algorithm_help += this->BLUE + "B" + this->RESET + " ---KILL---> " + this->MAGENTA + "D" + this->RESET + "\n";
     algorithm_help += this->GREEN + "C" + this->RESET + " ---KILL---> " + this->RED + "A" + this->RESET + "\n";
-    algorithm_help += this->MAGENTA + "D" + this->RESET + " ---KILL---> " + "NONE" + "\n";
+    algorithm_help += this->MAGENTA + "D" + this->RESET + " ---KILL---> " + this->BLUE + "B" + this->RESET + "\n";
     algorithm_help += "\n";
     algorithm_help += this->RED + "A" + this->RESET + " + " + this->MAGENTA + "D" + this->RESET + " ---DUPLIQUE---> " + this->RED + "A" + this->RESET + "\n";
     algorithm_help += this->BLUE + "B" + this->RESET + " + " + this->RED + "A" + this->RESET + " ---DUPLIQUE---> " + this->BLUE + "B" + this->RESET + "\n";
@@ -72,22 +72,22 @@ void setup::handle_Collision(){
                     break; 
                 }
 
-                else if (objects[i]->type == static_cast<int>(setup::ObjectType::C) && objects[j]->type == static_cast<int>(setup::ObjectType::A)) { // C touche A
+                //else if (objects[i]->type == static_cast<int>(setup::ObjectType::C) && objects[j]->type == static_cast<int>(setup::ObjectType::A)) { // C touche A
 
-                    toRemove.push_back(j); 
-                    this->A_delete++;
-                    objects[i]->handleInteraction();
-                    objects[j]->handleInteraction();
-                    break; 
-                }
-                else if (objects[i]->type == static_cast<int>(setup::ObjectType::D) && objects[j]->type == static_cast<int>(setup::ObjectType::B)) { // C touche A
+                //    toRemove.push_back(j); 
+                //    this->A_delete++;
+                //    objects[i]->handleInteraction();
+                //    objects[j]->handleInteraction();
+                //    break; 
+                //}
+                //else if (objects[i]->type == static_cast<int>(setup::ObjectType::D) && objects[j]->type == static_cast<int>(setup::ObjectType::B)) { // D touche B
 
-                    toRemove.push_back(j);
-                    this->B_delete++;
-                    objects[i]->handleInteraction();
-                    objects[j]->handleInteraction();
-                    break;
-                }
+                //    toRemove.push_back(j);
+                //    this->B_delete++;
+                //    objects[i]->handleInteraction();
+                //    objects[j]->handleInteraction();
+                //    break;
+                //}
                 else if (objects[i]->type == static_cast<int>(setup::ObjectType::A) && objects[j]->type == static_cast<int>(setup::ObjectType::D)) { // A touche D
                     auto now = std::chrono::steady_clock::now();
                     auto& objA = objects[i]->type == static_cast<int>(setup::ObjectType::A) ? objects[i] : objects[j];
@@ -145,6 +145,10 @@ void setup::handle_Collision(){
                         objC->lastDuplicationTime = now;
                         objC->handleInteraction();
                     }
+                        toRemove.push_back(j);
+                        this->B_delete++;
+                        objects[i]->handleInteraction(); ///////////////////////////////////////////////
+                        objects[j]->handleInteraction();
                 }
                 else if (objects[i]->type == static_cast<int>(setup::ObjectType::D) && objects[j]->type == static_cast<int>(setup::ObjectType::C)) { // D touche C
                     auto now = std::chrono::steady_clock::now();
@@ -212,23 +216,40 @@ std::string setup::see_Evolution_Statistic(){
         this->statistics += "statistics ID: " + std::to_string(this->ID);
         this->statistics += "\n";
         if (settings_Obj.APPEND_OBJECTS_TYPE_A)
-            this->statistics += this->RED + "A" + this->RESET + " as been duplicate " + std::to_string(this->A_duplication) + " time" + "\n";
+            this->statistics += this->RED + "A" + this->RESET + " as been duplicate " + std::to_string(this->A_duplication) + " times" + "\n";
         if (settings_Obj.APPEND_OBJECTS_TYPE_B)
-            this->statistics += this->BLUE + "B" + this->RESET + " as been duplicate " + std::to_string(this->B_duplication) + " time" + "\n";
+            this->statistics += this->BLUE + "B" + this->RESET + " as been duplicate " + std::to_string(this->B_duplication) + " times" + "\n";
         if (settings_Obj.APPEND_OBJECTS_TYPE_C)
-            this->statistics += this->GREEN + "C" + this->RESET + " as been duplicate " + std::to_string(this->C_duplication) + " time" + "\n";
+            this->statistics += this->GREEN + "C" + this->RESET + " as been duplicate " + std::to_string(this->C_duplication) + " times" + "\n";
         if (settings_Obj.APPEND_OBJECTS_TYPE_D)
-            this->statistics += this->MAGENTA + "D" + this->RESET + " as been duplicate " + std::to_string(this->D_duplication) + " time" + "\n";
+            this->statistics += this->MAGENTA + "D" + this->RESET + " as been duplicate " + std::to_string(this->D_duplication) + " times" + "\n";
         this->statistics += ".\n";
-
         if (settings_Obj.APPEND_OBJECTS_TYPE_A)
-            this->statistics += this->RED + "A" + this->RESET + " as been delete " + std::to_string(this->A_delete) + " time" + "\n";
+            this->statistics += this->RED + "A" + this->RESET + " as been delete " + std::to_string(this->A_delete) + " times" + "\n";
         if (settings_Obj.APPEND_OBJECTS_TYPE_B)
-            this->statistics += this->BLUE + "B" + this->RESET + " as been delete " + std::to_string(this->B_delete) + " time" + "\n";
+            this->statistics += this->BLUE + "B" + this->RESET + " as been delete " + std::to_string(this->B_delete) + " times" + "\n";
         if (settings_Obj.APPEND_OBJECTS_TYPE_C)
-            this->statistics += this->GREEN + "C" + this->RESET + " as been delete " + std::to_string(this->C_delete) + " time" + "\n";
+            this->statistics += this->GREEN + "C" + this->RESET + " as been delete " + std::to_string(this->C_delete) + " times" + "\n";
         if (settings_Obj.APPEND_OBJECTS_TYPE_D)
-            this->statistics += this->MAGENTA + "D" + this->RESET + " as been delete " + std::to_string(this->D_delete) + " time" + "\n";
+            this->statistics += this->MAGENTA + "D" + this->RESET + " as been delete " + std::to_string(this->D_delete) + " times" + "\n";
+        //this->statistics += ".\n";
+        //if (settings_Obj.APPEND_OBJECTS_TYPE_A)
+        //    this->statistics += this->RED + "A" + this->RESET + " has hunted " + std::to_string(gameObj_Object.A_is_hunting) + " times" + "\n";
+        //if (settings_Obj.APPEND_OBJECTS_TYPE_B)
+        //    this->statistics += this->BLUE + "B" + this->RESET + " has hunted " + std::to_string(gameObj_Object.B_is_hunting) + " times" + "\n";
+        //if (settings_Obj.APPEND_OBJECTS_TYPE_C)
+        //    this->statistics += this->GREEN + "C" + this->RESET + " has hunted " + std::to_string(gameObj_Object.C_is_hunting) + " times" + "\n";
+        //if (settings_Obj.APPEND_OBJECTS_TYPE_D)
+        //    this->statistics += this->MAGENTA + "D" + this->RESET + " has hunted " + std::to_string(gameObj_Object.D_is_hunting) + " times" + "\n";
+        //this->statistics += ".\n";
+        //if (settings_Obj.APPEND_OBJECTS_TYPE_A)
+        //    this->statistics += this->RED + "A" + this->RESET + " escaped " + std::to_string(gameObj_Object.A_is_hunting) + " times" + "\n";
+        //if (settings_Obj.APPEND_OBJECTS_TYPE_B)
+        //    this->statistics += this->BLUE + "B" + this->RESET + " escaped " + std::to_string(gameObj_Object.B_is_hunting) + " times" + "\n";
+        //if (settings_Obj.APPEND_OBJECTS_TYPE_C)
+        //    this->statistics += this->GREEN + "C" + this->RESET + " escaped " + std::to_string(gameObj_Object.C_is_hunting) + " times" + "\n";
+        //if (settings_Obj.APPEND_OBJECTS_TYPE_D)
+        //    this->statistics += this->MAGENTA + "D" + this->RESET + " escaped " + std::to_string(gameObj_Object.D_is_hunting) + " times" + "\n";
         this->count = 0;
         return this->statistics;
 

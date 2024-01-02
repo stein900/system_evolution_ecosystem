@@ -2,18 +2,18 @@
 class Settings {
 public:
 	//behavior
-	int TIME_TO_LIVE = 14; //20
+	int TIME_TO_LIVE = 7; //20
 	bool INDIVIDUAL_LIFETIME = true; // IMPORTANT
-	int TIME_TO_LIVE_FOR_A = 5; //20
+	int TIME_TO_LIVE_FOR_A = 4; //20
 	int TIME_TO_LIVE_FOR_B = 4; //20
 	int TIME_TO_LIVE_FOR_C = 4; //20
-	int TIME_TO_LIVE_FOR_D = 20; //20
+	int TIME_TO_LIVE_FOR_D = 30; //20
 
 	float SPEED_MULTIPLICATION = 3.0f; //3
 	int PAUSE_DURATION_AFTER_CREATION = 20; //20
 
-	float VISION_ANGLE = 45.0f; //45
-	float VISION_RANGE = 100.0f; //100
+	float VISION_ANGLE = 30.0f; //45
+	float VISION_RANGE = 32.0f; //100
 	bool INDIVIDUAL_VISION_BEHAVIOR = false;
 		float VISION_ANGLE_OF_A_ObJECT_TYPE = 312.0f; //45
 		float VISION_RANGE_OF_A_ObJECT_TYPE = 240.0f; //100
